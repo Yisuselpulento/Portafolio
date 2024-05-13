@@ -4,9 +4,9 @@ import Discord from "./icons/Discord.astro"
 import Email from "./icons/Email.astro"
 import Wsp from "./icons/Wsp.astro"
 
-const className = "flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 hover:scale-105 transition px-3 py-2 rounded-lg md:w-[200px] "
+const className = "flex items-center gap-4 dark:bg-zinc-800 dark:hover:bg-zinc-700 hover:scale-105 transition px-3 py-2 rounded-lg md:w-[200px] bg-gray-100 shadow dark:bg-opacity-50 border dark:border-gray-800 "
 
-const classNameNoHover = "flex items-center gap-4 bg-zinc-800  px-3 py-2 rounded-lg md:w-[200px] "
+const classNameNoHover = "dark:bg-opacity-50 border dark:border-gray-800 flex items-center gap-4 dark:bg-zinc-800  px-3 py-2 rounded-lg md:w-[200px] bg-gray-100 shadow"
 
 ---
 
@@ -22,7 +22,7 @@ const classNameNoHover = "flex items-center gap-4 bg-zinc-800  px-3 py-2 rounded
             class={className}>
                 <Instagram  class="size-8"/>
                 <div>
-                    <p class="text-gray-300">Instagram</p>
+                    <p >Instagram</p>
                 </div>
             </a>
             <a 
@@ -30,14 +30,14 @@ const classNameNoHover = "flex items-center gap-4 bg-zinc-800  px-3 py-2 rounded
             class={className}>
                 <Discord  class="size-8"/>
                 <div>
-                    <p class="text-gray-300">Discord</p>
+                    <p >Discord</p>
                 </div>
             </a>
             <div 
             class={classNameNoHover}>
                 <Wsp class="size-8" />
                 <div>
-                    <p class="text-gray-300">WhatsApp</p>
+                    <p >WhatsApp</p>
                     <p>+56975259414</p>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const classNameNoHover = "flex items-center gap-4 bg-zinc-800  px-3 py-2 rounded
             class={classNameNoHover}>
                 <Email  class="size-8"/>
                 <div>
-                    <p class="text-gray-300">Telegram</p>
+                    <p >Telegram</p>
                     <p>+56975259414</p>
                 </div>
             </div>

@@ -55,7 +55,7 @@ const tagSrc = {
         <Code class="w-8 "/> Proyectos</h2>
     <div class="flex gap-10 flex-wrap  items-center justify-center md:p-4">
         {projects.map( project => (
-            <div class="bg-gradient-to-t from-neutral-900 to-neutral-600 bg-opacity-10 rounded-lg">
+            <div class="bg-gradient-to-t dark:from-neutral-900 dark:to-neutral-600 from-gray-200 to-gray-100  bg-opacity-10 rounded-lg shadow">
 
             <a
             href={project.link}
@@ -67,7 +67,7 @@ const tagSrc = {
                 class="relative overflow-hidden bg-cover bg-no-repeat rounded-t-lg ">
 
                 <img 
-                class="rounded-t-lg h-[270px] md:w-[500px] w-[400px] object-cover transition duration-300  bg-gradient-to-b from-blue-700 to-purple-700 p-px "
+                class="rounded-t-lg h-[270px] md:w-[500px] w-[400px] object-cover transition duration-300  bg-gradient-to-b dark:from-blue-700 dark:to-purple-700 from-orange-400 to-yellow-400 p-[1.5px] dark:p-px "
                 src={project.img} />
                  <div
       class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
@@ -95,14 +95,14 @@ const tagSrc = {
                         href={project.link}
                         target="_blank"
             rel="noreferrer noopener"
-                        class="bg-zinc-900 text-white border  rounded px-5 py-3 md:py-2 md:w-[150px]  hover:bg-white hover:text-black font-bold text-center transition duration-150">
+                        class=" bg-gradient-to-b dark:from-zinc-900 dark:to-zinc-900  from-indigo-800 to-indigo-900  dark:text-white dark:hover:from-gray-100 dark:hover:to-gray-100 text-white hover:from-indigo-500 hover:to-indigo-600 border  rounded px-5 py-3 md:py-2 md:w-[150px]  dark:hover:text-black font-bold text-center transition duration-300">
                         Preview
                     </a>
                     <a 
                      href={project.git}
                      target="_blank"
             rel="noreferrer noopener"
-                    class="bg-zinc-900 text-white border rounded px-5 py-3 md:py-2 md:w-[150px] hover:bg-white hover:text-black font-bold flex items-center gap-3 justify-center transition duration-150">
+                    class="bg-gradient-to-b dark:from-zinc-900 dark:to-zinc-900  from-indigo-800 to-indigo-900  dark:text-white dark:hover:from-gray-100 dark:hover:to-gray-100 text-white hover:from-indigo-500 hover:to-indigo-600 border  rounded px-5 py-3 md:py-2 md:w-[150px]  dark:hover:text-black font-bold text-center flex items-center gap-3 justify-center transition duration-300">
                         <GitHub class="size-5"/>
                         Github
                     </a>
