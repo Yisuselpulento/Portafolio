@@ -1,0 +1,117 @@
+---
+import Code from "./icons/Code.astro"
+import GitHub from "./icons/GitHub.astro"
+
+const projects = [{
+    name : "KanjiApp",
+    description : "Red Social MERN Full Stack",
+    tecnologias : ["React", "Tailwindcss", "MongoDB", "Node"],
+    img : "project4.webp",
+    link : "https://kanjiapp.netlify.app",
+    git : "https://github.com/Yisuselpulento/KanjiApp"
+}, {
+    name : "FoodMon",
+    description : "Red Social MERN Full Stack",
+    tecnologias : ["React", "Tailwindcss"],
+    img : "project3.webp",
+    link : "https://foodmon.netlify.app/",
+    git : "https://github.com/Yisuselpulento/FoodMoon"
+},
+{
+    name : "League Search",
+    description : "Red Social MERN Full Stack",
+    tecnologias : ["React", "Tailwindcss"],
+    img : "project2.webp",
+    link : "https://leagueofmonsster.netlify.app/",
+    git : "https://github.com/Yisuselpulento/LeagueofSearch"
+},
+{
+    name : "CarKanji",
+    description : "Red Social MERN Full Stack",
+    tecnologias : ["React", "Tailwindcss"],
+    img : "project1.webp",
+     link : "https://carkanji.netlify.app/",
+     git : "https://github.com/Yisuselpulento/carkanji"
+}]
+
+const colorsTag = {
+    React: "bg-blue-600 text-white",
+    Node : "bg-emerald-600 text-gray-200",
+    Tailwindcss :  "bg-sky-600 text-white",
+    MongoDB : "bg-green-600 text-white"
+}
+
+const tagSrc = {
+    React : "react.svg",
+    Node : "nodejs-icon.svg",
+    Tailwindcss : "tailwindcss-icon.svg",
+    MongoDB : "mongodb-icon.svg"
+
+}
+---
+
+<section id="project" class="flex items-center flex-col gap-4 md:pt-20">
+    <h2 class="flex gap-3 items-center text-2xl md:text-3xl  mb-8">
+        <Code class="w-8 "/> Proyectos</h2>
+    <div class="flex gap-10 flex-wrap  items-center justify-center md:p-4">
+        {projects.map( project => (
+            <div class="bg-gradient-to-t from-neutral-900 to-neutral-600 bg-opacity-10 rounded-lg">
+
+            <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer noopener"
+            >
+                <div 
+                style="clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 98%);"  
+                class="relative overflow-hidden bg-cover bg-no-repeat rounded-t-lg ">
+
+                <img 
+                class="rounded-t-lg h-[270px] md:w-[500px] w-[400px] object-cover transition duration-300  bg-gradient-to-b from-blue-700 to-purple-700 p-px "
+                src={project.img} />
+                 <div
+      class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
+      ></div>
+                </div>
+            </a>
+            <div class="p-5 flex flex-col gap-5 ">
+                   <p class="text-lg font-bold">{project.name}</p> 
+                   <p>{project.description}</p>   
+                   <div class="flex gap-4 flex-wrap">
+                    {project.tecnologias.map( tag => (
+                        <div class={`rounded-full px-3 text-sm flex items-center gap-1 ${colorsTag[tag]}`}>
+                        <img 
+                        class="size-3"
+                        src={tagSrc[tag]} />
+                        <p>
+                            {tag}
+                        </p>
+                        </div>
+                    ))}
+                    </div> 
+                    <div class="flex md:gap-5 gap-4 md:flex-row flex-col">
+
+                    <a 
+                        href={project.link}
+                        target="_blank"
+            rel="noreferrer noopener"
+                        class="bg-zinc-900 text-white border  rounded px-5 py-3 md:py-2 md:w-[150px]  hover:bg-white hover:text-black font-bold text-center transition duration-150">
+                        Preview
+                    </a>
+                    <a 
+                     href={project.git}
+                     target="_blank"
+            rel="noreferrer noopener"
+                    class="bg-zinc-900 text-white border rounded px-5 py-3 md:py-2 md:w-[150px] hover:bg-white hover:text-black font-bold flex items-center gap-3 justify-center transition duration-150">
+                        <GitHub class="size-5"/>
+                        Github
+                    </a>
+                    </div>
+           </div>
+         </div>
+              
+        ))}
+
+    </div>
+</section>
+

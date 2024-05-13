@@ -1,0 +1,38 @@
+---
+import Close from "./icons/Close.astro"
+import NavIcon from "./icons/NavIcon.astro"
+import Sun from "./icons/Sun.astro"
+
+const className = "hover:text-indigo-400"
+
+let openNav = true
+function handleChangeNav () {
+   openNav = !openNav
+   console.log("hola")
+}
+---
+
+<header  class="fixed top-0 mx-auto z-10 w-full  bg-opacity-45 backdrop-blur-sm ">
+   <!--  <button
+   
+    class="flex justify-end w-full p-3">
+      {openNav ?  <NavIcon class="size-10" /> : <Close />}
+    </button> -->
+    <nav class="md:flex md:justify-between md:flex-row flex-col items-center px-3  pt-3 pb-1 md:w-[1200px] mx-auto hidden">
+        <a href="#top" rel="noopener noreferrer">
+            <img 
+            class="size-10"
+            src="/logobw.webp" alt="logo de mi portafolio" /></a>
+        <div class="flex justify-between items-center gap-5 md:flex-row flex-col">
+            <div class="flex gap-6 md:flex-row flex-col">
+                <a class={className} href="#top" rel="noopener noreferrer" >Inicio</a>
+                <a class={className}  href="#project" rel="noopener noreferrer" >Proyectos</a>
+                <a class={className}  href="#about" rel="noopener noreferrer" >Sobre mi</a>
+                <a class={className}  href="#contact" rel="noopener noreferrer">Contactame</a>
+
+            </div>
+            <button><Sun class="w-8" /></button>
+        </div>     
+    </nav>
+</header>
+
