@@ -3,30 +3,23 @@ import Close from "./icons/Close.astro"
 import NavIcon from "./icons/NavIcon.astro"
 import ThemeToggle from "./ThemeToggle.astro"
 
-const className = "dark:hover:text-indigo-500 hover:text-yellow-600"
-
-let openNav = true
-
-function handleChangeNav () {
-   /* openNav = !openNav */
-   console.log("hola")
-}
+const className = "dark:hover:text-indigo-500 hover:text-yellow-600 md:font-normal font-bold dark:text-white text-black"
 
 ---
 
-<header  class="fixed top-0 mx-auto z-10 w-full  bg-opacity-45 backdrop-blur-sm ">
- <!--   <button
-  
-    class="flex justify-end w-full p-3">
-     {openNav ?  <NavIcon class="size-10" /> : <Close />}
-    </button>  -->
-    <nav class="md:flex md:justify-between md:flex-row flex-col items-center px-3  pt-3 pb-1 md:w-[1200px] mx-auto hidden">
+<header  class="fixed top-0 mx-auto z-10 w-full dark:bg-opacity-45 bg-opacity-45 backdrop-blur-sm rounded flex flex-col items-end">
+    <button
+    class="menu-button md:hidden flex items-end dark:bg-neutral-900 bg-gray-300 dark:bg-opacity-80 bg-opacity-80  shadow rounded-full  p-2 m-3 dark:hover:bg-neutral-800 hover:bg-gray-200">
+     <NavIcon class="toggle-icon size-7 " /> 
+     <Close class="toggle-icon-2 hidden size-7 " />
+    </button> 
+    <nav class="menu-open hidden md:flex md:justify-between md:flex-row flex-col md:items-center px-3  pt-3 pb-1 md:w-[1200px] md:mx-auto h-full md:h-full gap-6 md:gap-0 items-end dark:bg-neutral-600  bg-gray-400  w-full rounded dark:bg-opacity-45 bg-opacity-45 md:dark:bg-opacity-0 md:bg-opacity-0 backdrop-blur-sm ">
         <a href="#top" rel="noopener noreferrer">
             <img 
             class="size-10"
             src="/logobw.webp" alt="logo de mi portafolio" /></a>
-        <div class="flex justify-between items-center gap-5 md:flex-row flex-col">
-            <div class="flex gap-6 md:flex-row flex-col">
+        <div class="flex md:justify-between md:items-center gap-5 md:flex-row flex-col items-end pb-4 md:pb-0">
+            <div class="flex md:gap-6 gap-10 md:flex-row flex-col items-end md:items-center">
                 <a class={className} href="#top" rel="noopener noreferrer" >Inicio</a>
                 <a class={className}  href="#project" rel="noopener noreferrer" >Proyectos</a>
                 <a class={className}  href="#about" rel="noopener noreferrer" >Sobre mi</a>
@@ -37,3 +30,21 @@ function handleChangeNav () {
         </div>     
     </nav>
 </header>
+
+<script>
+    const button = document.querySelector(".menu-button")
+    const menu = document.querySelector('.menu-open')
+    const navIcon = document.querySelector('.toggle-icon')
+    const close = document.querySelector('.toggle-icon-2')
+
+    button.addEventListener('click',handleChangeNav )
+
+    function handleChangeNav () {
+   navIcon.classList.toggle('hidden'); 
+        close.classList.toggle('hidden'); 
+
+   menu.classList.toggle("hidden")
+   menu.classList.toggle("flex")
+}
+
+</script>
