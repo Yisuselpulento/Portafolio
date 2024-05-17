@@ -36,9 +36,9 @@ const projects = [{
 
 const colorsTag = {
     React: "bg-blue-600 text-white",
-    Node : "bg-emerald-600 text-gray-200",
-    Tailwindcss :  "bg-sky-600 text-white",
-    MongoDB : "bg-green-600 text-white"
+    Node : "bg-emerald-800 text-gray-200",
+    Tailwindcss :  "bg-sky-700 text-white",
+    MongoDB : "bg-green-800 text-white"
 }
 
 const tagSrc = {
@@ -67,6 +67,8 @@ const tagSrc = {
                 class="relative overflow-hidden bg-cover bg-no-repeat rounded-t-lg ">
 
                 <img 
+                loading="lazy"
+                alt={`imagen del proyecto ${project.name}`}
                 class="rounded-t-lg h-[270px] md:w-[500px] w-[400px] object-cover transition duration-300  bg-gradient-to-b dark:from-blue-700 dark:to-purple-700 from-orange-400 to-yellow-400 p-[1.5px] dark:p-px "
                 src={project.img} />
                  <div
@@ -81,6 +83,8 @@ const tagSrc = {
                     {project.tecnologias.map( tag => (
                         <div class={`rounded-full px-3 text-sm flex items-center gap-1 ${colorsTag[tag]}`}>
                         <img 
+                        loading="lazy"
+                        alt={`imagen del tag ${tag}`}
                         class="size-3"
                         src={tagSrc[tag]} />
                         <p>
