@@ -77,14 +77,17 @@ function scroll(distance) {
                     </button>
                     <div id="scrollSection" class="flex flex-row flex-wrap  gap-5 w-full justify-center ">
                    {techStack.map( tech => (
-                    <div class=" bg-gradient-to-b dark:from-neutral-900 dark:to-neutral-700  dark:hover:from-neutral-800 dark:hover:to-neutral-600 rounded flex flex-col items-center py-3 px-1 gap-4 dark:text-gray-300 w-[95px]  text-center border dark:border-gray-800 border-gray-300 from-gray-100 to-gray-200 shadow hover:from-gray-200 hover:to-gray-300">
+                    <div class="bg-gradient-to-b dark:from-neutral-900 dark:to-neutral-700  dark:hover:from-neutral-800 dark:hover:to-neutral-600 rounded flex flex-col items-center py-3 px-1 gap-4 dark:text-gray-300 w-[95px]  text-center border dark:border-gray-800 border-gray-300 from-gray-100 to-gray-200 shadow hover:from-gray-200 hover:to-gray-300 ">
+                   
                         <img 
                         class="size-12"
                         src={tech.src}  />
                         <p>{tech.name}</p>
                     </div>
+                    
                    ))}
                     </div>
+                   
                     <button  
                     class="hidden"
                     >
