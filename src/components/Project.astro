@@ -54,7 +54,7 @@ const tagSrc = {
     <h2 class="flex gap-3 items-center text-2xl md:text-3xl  mb-8">
         <Code class="w-8 "/> Proyectos</h2>
     <div class="flex gap-10 flex-wrap  items-center justify-center md:p-4">
-        {projects.map( project => (
+        {projects.map( (project, i )=> (
             <div class="bg-gradient-to-t dark:from-neutral-900 dark:to-neutral-600 from-gray-200 to-gray-100  bg-opacity-10 rounded-lg shadow">
 
             <a
@@ -67,6 +67,7 @@ const tagSrc = {
                 class="relative overflow-hidden bg-cover bg-no-repeat rounded-t-lg ">
 
                 <img 
+                loading={i > 0 ? "lazy" : "eager"}
                 alt={`imagen del proyecto ${project.name}`}
                 class="rounded-t-lg h-[270px]  w-[500px] object-cover transition duration-300  bg-gradient-to-b dark:from-blue-700 dark:to-purple-700 from-orange-400 to-yellow-400 p-[1.5px] dark:p-px "
                 src={project.img} />
