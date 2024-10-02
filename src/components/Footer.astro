@@ -1,3 +1,16 @@
-<footer class="m-auto p-10 flex items-center justify-center md:h-[180px] dark:bg-zinc-900 w-full mt-12 text-center">
+---
+import GitHub from "./icons/GitHub.astro";
+import Instagram from "./Instagram.astro";
+---
+
+<footer class="m-auto p-10 flex items-center justify-center md:h-[180px] dark:bg-zinc-900 w-full mt-12 text-center flex-col gap-2">
     <p class="text-sm ">Made by Monsster</p>
+    <div class="flex gap-2">
+        <a href="https://github.com/Yisuselpulento" >
+            <GitHub color="white" class="size-[30px] hover:scale-110"/>
+        </a>
+        <a href="https://www.instagram.com/_.monsster._/">
+            <Instagram  color="white" class="size-[30px]  hover:scale-110" />
+        </a>
+    </div>
 </footer>
